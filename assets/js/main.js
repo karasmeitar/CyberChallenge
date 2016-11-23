@@ -102,7 +102,7 @@ $('.cyb-button').click(function(){
             $('.cyb-second-form').hide();
             window.setTimeout(function () {
                 questionManager.beginNewQuiz(2, false,false, function () {
-                    nextFunc();
+                    func1();
                 });
             }, 10000);
             $('.cyb-second-form').hide();
@@ -111,51 +111,29 @@ $('.cyb-button').click(function(){
 
 });
 
-var nextFunc=function(){
-    changePosition('.cyb-main-background','-4300px','768px',3000,function(){
-        questionManager.beginNewQuiz(1, true,true,function(){
-
-            $('.cyb-main-avatar').animate({
-                'marginLeft': '530px'
-            },3000);
-            $('.cyb-office').show();
-            $('.cyb-bag').addClass('animated-slow').addClass('slideFromRight');
-            $('.cyb-table').addClass('animated').addClass('bounceInDown');
-            $('.cyb-bookcase').addClass('animated-slow').addClass('slideFromLeft');
-            $('.cyb-clock').addClass('animated-slow').addClass('win-fade');
-            window.setTimeout(function(){
-                $('.cyb-clock').css('opacity','1');
-            }, 1000);
-        });
-    });
-    $('.cyb-second-form').hide();
-};
-
-
-$('.cyb-change1').click(function(){
+var func1=function(){
     $('.cyb-bag').hide();
     $('.cyb-table').hide();
     $('.cyb-bookcase').hide();
     $('.cyb-clock').hide();
     changePosition('.cyb-main-background','-6000px','768px',3000,function() {
-
+        window.setTimeout(function () {
+            questionManager.beginNewQuiz(1, true,true, function () {
+                nextFunc1();
+            });
+        }, 8000);
     });
 
     setTimeout(function(){
         $( ".cyb-hero-party" ).css( "display", "block" );
-
         fadeIn(".cyb-hero-party", 2000);
-
     }, 2000);
 
     setTimeout(function(){
         $( ".cyb-glass" ).css( "display", "block" );
-
         $( ".cyb-glass" ).addClass("animated-slow").addClass("bounceInDown ");
 
     }, 2000);
-
-
     setTimeout(function(){
         $( ".cyb-crystal-ball" ).css( "display", "block" );
         $( ".cyb-crystal-ball" ).addClass("animated-slow").addClass("bounceInDown ");
@@ -163,7 +141,7 @@ $('.cyb-change1').click(function(){
 
 
 
-});
+};
 
 var nextFunc1=function(){
     changePosition('.cyb-main-background','-8000px','768px',3000,function() {});
