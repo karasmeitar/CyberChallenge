@@ -104,10 +104,10 @@ $('.cyb-button').click(function(){
                 questionManager.beginNewQuiz(2, false,false, function () {
                     func1();
                 });
-            }, 10000);
+            }, 6000);
             $('.cyb-second-form').hide();
         });
-    },6000);
+    },3000);
 
 });
 
@@ -121,7 +121,7 @@ var func1=function(){
             questionManager.beginNewQuiz(1, true,true, function () {
                 nextFunc1();
             });
-        }, 8000);
+        }, 2000);
     });
 
     setTimeout(function(){
@@ -145,7 +145,9 @@ var func1=function(){
 
 var nextFunc1=function(){
     changePosition('.cyb-main-background','-8000px','768px',3000,function() {});
-
+    $( ".cyb-crystal-ball").hide();
+    $( ".cyb-glass" ).hide();
+    $( ".cyb-hero-party").hide();
     setTimeout(function(){
 
         $( ".character2" ).css( "display", "block" );
