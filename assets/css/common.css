@@ -1,15 +1,52 @@
 /*main screen*/
 .cyb-tree{
-
+margin-left: 30%;
+    height: 100px;
+    width: 50px;
+    position: fixed;
+    bottom: 120px;
 }
 
 .cyb-main-avatar{
-
+    margin-left: calc(50% - 260px);
+    position: fixed;
+    bottom: -31px;
 }
 
 .cyb-main-background{
-    background-image: url("first-background.png");
+    background-image: url("../images/first-background.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-clip: border-box;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.enjoy-css {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 160px;
+    cursor: pointer;
+    padding: 9px 20px;
+    overflow: hidden;
+    border: 1px solid;
+    font: normal 19px/1 "Acme", Helvetica, sans-serif;
+    color: rgba(0,0,0,1);
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background: #ffffff;
+    -webkit-box-shadow: 3px 3px 0 0 rgba(0,0,0,0.8) ;
+    box-shadow: 3px 3px 0 0 rgba(0,0,0,0.8) ;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
+}
+
+.enjoy-css:active {
+    margin: 3px 0 0 3px;
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.8) ;
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.8) ;
 }
