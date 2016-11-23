@@ -31,6 +31,34 @@ body{
     bottom: 16px;
 }
 
+.cyb-main-text{
+    font-size: 56px;
+    color:white;
+    font-family: "Open Sans";
+    text-shadow: 2px 2px black;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    background-color: transparent;
+    padding-top: 170px;
+    padding-left: 432px;
+}
+
+.cyb-title{
+    display: none;
+}
+
+.middle{
+    font-size: 56px;
+    color:white;
+    font-family: "Open Sans";
+    text-shadow: 2px 2px black;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    background-color: transparent;
+    padding-left: 530px;
+}
 
 
 .cyb-tree6{
@@ -104,16 +132,17 @@ body{
 
 
 .cyb-main-avatar{
-    margin-left: calc(50% - 260px);
+    margin-left: calc(50% - 470px);
     position: fixed;
     bottom: 70px;
+    display: none;
 }
 
 .cyb-need-animate-down{
     z-index: 1005;
 }
 .cyb-main-background{
-    background-image: url("../images/BG-5.jpg");
+    background-image: url("../images/BG-6.jpg");
    background-position: 0px 768px;
     height: 100vh;
     width: 100vw;
@@ -146,10 +175,11 @@ body{
     padding: 9px 23px;
     text-align: center;
     text-decoration: none;
-    left: 42%;
-    top: 23%;
+    left: 41%;
+    top: 43%;
     text-align: center;
     position: fixed;
+    display: none;
 }
 /*.cyb-window {
 	display: none;
@@ -215,6 +245,7 @@ body{
 }
 
 .cyb-change{
+    display: none !important;
     height: 100px;
     width: 100px;
     display: block;
@@ -225,6 +256,7 @@ body{
 }
 
 .cyb-change1{
+    display: none !important;
     height: 100px;
     width: 100px;
     display: block;
@@ -235,6 +267,7 @@ body{
 }
 
 .cyb-change2{
+    display: none !important;
     height: 100px;
     width: 100px;
     display: block;

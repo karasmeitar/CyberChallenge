@@ -1,6 +1,16 @@
+$( document ).ready(function(){
+    $('.cyb-title').show().addClass('animated-slow bounceInDown');
+    window.setTimeout(function(){
+        $('.cyb-main-avatar').show().addClass('animated-slow bounceInDown');
+        $('.cyb-button').show().addClass('animated-slow bounceInDown');
+
+    },1000);
+});
+
 $('.cyb-button').click(function(){
     changePosition('.cyb-main-background','-1500px','768px',3000);
     $('.cyb-tree').hide();
+    $('.cyb-title').hide();
     $('.cyb-main-avatar').animate({
         'marginLeft': '100px'
     },3000,function(){
@@ -17,9 +27,15 @@ $('.cyb-button').click(function(){
                 $('.cyb-table').addClass('animated').addClass('bounceInDown');
                 $('.cyb-bookcase').addClass('animated-slow').addClass('slideFromLeft');
                 $('.cyb-clock').addClass('animated-slow').addClass('win-fade');
+                window.setTimeout(function() {
+                    questionManager.resetManager(1);
+                    questionManager.buildQuestion(false, function () {
+                        nextFunc();
+                    });
+                }, 5000);
                 window.setTimeout(function(){
                     $('.cyb-clock').css('opacity','1');
-                }, 1000);
+                }, 6000);
             });
             $('.cyb-second-form').hide();
         });
@@ -28,7 +44,7 @@ $('.cyb-button').click(function(){
 
 });
 
-$('.cyb-change').click(function(){
+var nextFunc=function(){
     changePosition('.cyb-main-background','-4300px','768px',3000,function(){
         $('.cyb-main-avatar').animate({
             'marginLeft': '530px'
@@ -43,7 +59,7 @@ $('.cyb-change').click(function(){
         }, 1000);
     });
     $('.cyb-second-form').hide();
-});
+};
 
 
 $('.cyb-change1').click(function(){
