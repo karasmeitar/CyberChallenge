@@ -1,0 +1,43 @@
+function questionManager () {
+
+    var allQuestionAnswers = {
+        "1": "",
+        "1": ""
+    };
+
+    var allQuestionsDB = [
+        {
+            questionID: 1,
+            questionContent: "How do you make each word in a text start with a capital letter?",
+            PosibleAnswers:[
+                {
+                    answerID:1,
+                    answerContent: "text-transform:capitalize"
+                },
+                {
+                    answerID:2,
+                    answerContent: "text-transform:uppercase"
+                },
+                {
+                    answerID:3,
+                    answerContent: "You can't do that with CSS"
+                },
+                {
+                    answerID:4,
+                    answerContent: "text:capitalize"
+                }
+            ]
+        }
+    ];
+
+    this.getRandomQuestion = function() {
+        // Return a random number between 0 and 10:
+        var randomID = Math.floor((Math.random() * this.allQuestionsDB.length));
+        return this.allQuestionsDB[randomID];
+    }
+
+    this.isAnswerCorrectForSpecificQuestions = function(questionID, answerID){
+        var answer = this.allQuestionAnswers[questionID];
+        return answer == answerID ? true : false;
+    }
+};
