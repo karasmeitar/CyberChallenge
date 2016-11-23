@@ -155,7 +155,7 @@ var questionManager = (function(){
 						});
 					}
 					else {
-						managerToReturn.createAmricanQuestion();
+						managerToReturn.createAmricanQuestion(isParty);
 					}
 				}
 
