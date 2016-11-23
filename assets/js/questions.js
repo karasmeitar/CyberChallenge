@@ -67,13 +67,19 @@ var questionManager = (function(){
 
 		var titleTag = document.createElement("h1");
 		titleTag.innerHTML = question.questionContent;
+		titleTag.classList.add("american-question");
 		managerToReturn.win.appendChild(titleTag);
+
+        var answers = document.createElement("div");
+        answers.classList.add("american-answer-list");
+        managerToReturn.win.appendChild(answers);
 
 		for	(var i =1; i < question.PosibleAnswers.length + 1; i++) {
 			var currAnswer = document.createElement("h3");
-			currAnswer.innerHTML = i.toString() + ") " + question.PosibleAnswers[i - 1].answerContent;
+			currAnswer.innerHTML = question.PosibleAnswers[i - 1].answerContent;
 			currAnswer.setAttribute("data-answerID", question.PosibleAnswers[i - 1].answerID);
-			
+            currAnswer.classList.add("american-answer");
+
 			currAnswer.onclick = function(e) {
 				var result = manager.isAnswerCorrectForSpecificQuestions(question.questionID, e.target.attributes[0].value);
 				
@@ -119,7 +125,7 @@ var questionManager = (function(){
 				managerToReturn.win.appendChild(nextButton);
 			};
 
-			managerToReturn.win.appendChild(currAnswer);
+            answers.appendChild(currAnswer);
 		}
 	}
 
