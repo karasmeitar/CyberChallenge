@@ -162,10 +162,6 @@ body{
 
 }
 
-.cyb-second-form{
-    display: none;
-}
-
 .slideout{
     animation: slideout 5s linear;
 }
@@ -223,26 +219,26 @@ body{
   z-index: 1002;
 }
 
-.cyb-office{
-    display: none;
-}
-
 .cyb-bookcase {
-    margin-left: calc(50% - 340px);
+    display: none;
+    margin-left: calc(50% - 450px);
+    margin-left: calc(50% - 450px);
     position: fixed;
-    bottom: 5px;
+    bottom: 63px;
     z-index: 1003;
 }
 
 .cyb-table {
+    display: none;
     margin-left: calc(50% - 260px);
     position: fixed;
-    bottom: 5px;
+    bottom: 63px;
     z-index: 1003;
 }
 
 .cyb-clock {
-    left: calc(50% + 300px);
+    display: none;
+    left: calc(50% + 108px);
     top: 100px;
     position: fixed;
     z-index: 1003;
@@ -250,10 +246,11 @@ body{
 }
 
 .cyb-bag {
+    display: none;
     left: calc(50% + 300px);
     height: 100px;
     position: fixed;
-    bottom: 5px;
+    bottom: 63px;
     z-index: 1003;
 }
 
@@ -333,34 +330,4 @@ body{
     to {
         opacity: 1;
     }
-}
-
-.cyb-bookcase {
-    margin-left: calc(50% - 340px);
-    position: fixed;
-    bottom: 5px;
-    z-index: 1003;
-}
-
-.cyb-table {
-    margin-left: calc(50% - 260px);
-    position: fixed;
-    bottom: 5px;
-    z-index: 1003;
-}
-
-.cyb-clock {
-    left: calc(50% + 300px);
-    top: 100px;
-    position: fixed;
-    z-index: 1003;
-    opacity: 0;
-}
-
-.cyb-bag {
-    left: calc(50% + 300px);
-    height: 100px;
-    position: fixed;
-    bottom: 5px;
-    z-index: 1003;
 }

@@ -39,13 +39,14 @@ var questionManager = (function(){
 		titleTag.classList.add("american-question");
 		managerToReturn.win.appendChild(titleTag);
 
-		var input = document.createElement("input");
-		input.setAttribute("type", "text");
+		var input = document.createElement("textarea");
+        input.classList.add("code-question");
 		managerToReturn.win.appendChild(input);
 
 		var runBtn = document.createElement("button");
+        runBtn.classList.add("run-code-button");
 		runBtn.innerText = "Run";
-		
+
 		runBtn.onclick = function(){
 			codeText = "(function() {" + input.value  + "}())";
 				
@@ -70,8 +71,8 @@ var questionManager = (function(){
 			iconResultDiv.classList.add(result ? "correctIcon" : "wrongIcon");
 
 			var nextButton = document.createElement("button");
-			nextButton.innerText = "Next quiz";
-			nextButton.classList.add("next-button");
+			nextButton.innerText = "Next Question";
+			nextButton.classList.add("next-question-button");
 
 			nextButton.onclick = function (e) {					
 				managerToReturn.fade.style.display='none';
@@ -134,13 +135,13 @@ var questionManager = (function(){
 				var nextButton = document.createElement("button");
 				
 				if (managerToReturn.currentQuestionIndex === managerToReturn.numberOfQuestionToPresent) {
-					nextButton.innerText = "Next quiz";
+					nextButton.innerText = "Next Question";
 				}
 				else{
-					nextButton.innerText = "Next question";
+					nextButton.innerText = "Next Question";
 				}
 
-				nextButton.classList.add("next-button");
+				nextButton.classList.add("next-question-button");
 
 				nextButton.onclick = function (e) {
 					if (managerToReturn.currentQuestionIndex === managerToReturn.numberOfQuestionToPresent) {
