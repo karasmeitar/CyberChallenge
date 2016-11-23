@@ -1,0 +1,13 @@
+.american-question {
+    font-family: "Open Sans";
+    font-size: 27px;
+    width: 650px;
+}
+.american-answer {
+    font-family: "Open Sans";
+    cursor: pointer;
+    font-size: 22px;
+}
+.american-answer:hover {
+    color: #00BFFF;
+}
