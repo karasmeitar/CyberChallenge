@@ -1,0 +1,15 @@
+/*main screen*/
+.cyb-tree{
+
+}
+
+.cyb-main-avatar{
+
+}
+
+.cyb-main-background{
+    background-image: url("first-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
