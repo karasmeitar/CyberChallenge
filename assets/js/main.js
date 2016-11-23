@@ -59,7 +59,7 @@ $('.cyb-button').click(function(){
     });
     $('.cyb-button').hide();
     window.setTimeout(function() {
-        questionManager.beginNewQuiz(2, true, function () {
+        questionManager.beginNewQuiz(2, true,false, function () {
             $('.cyb-main-avatar').animate({
                 'marginLeft': '530px'
             }, 7000);
@@ -101,7 +101,7 @@ $('.cyb-button').click(function(){
             });
             $('.cyb-second-form').hide();
             window.setTimeout(function () {
-                questionManager.beginNewQuiz(2, false, function () {
+                questionManager.beginNewQuiz(2, false,false, function () {
                     nextFunc();
                 });
             }, 10000);
@@ -113,7 +113,7 @@ $('.cyb-button').click(function(){
 
 var nextFunc=function(){
     changePosition('.cyb-main-background','-4300px','768px',3000,function(){
-        questionManager.beginNewQuiz(1, true,function(){
+        questionManager.beginNewQuiz(1, true,true,function(){
 
             $('.cyb-main-avatar').animate({
                 'marginLeft': '530px'
