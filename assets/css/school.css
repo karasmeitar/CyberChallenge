@@ -9,6 +9,7 @@
 }
 
 .cyb-collage{
+	display: none;
     margin-left: 55%;
     height: 418px;
     width: 926px;
@@ -17,7 +18,8 @@
 }
 
 .cyb-hat{
-    margin-left: calc(50% - 510px);
+	display: none;
+    margin-left: calc(50% - 513px);
     height: 62px;
     width: 141px;
     position: fixed;
@@ -26,6 +28,7 @@
 }
 
 .cyb-book1{
+	display: none;
     margin-left: 22%;
     height: 22px;
     width: 98px;
@@ -34,6 +37,7 @@
 }
 
 .cyb-book2{
+	display: none;
     margin-left: 22%;
     height: 22px;
     width: 88px;
@@ -42,6 +46,7 @@
 }
 
 .cyb-book3{
+	display: none;
     margin-left: 22%;
     height: 21px;
     width: 100px;
@@ -50,6 +55,7 @@
 }
 
 .cyb-book4{
+	display: none;
     margin-left: 22%;
     height: 22px;
     width: 106px;
@@ -58,6 +64,7 @@
 }
 
 .cyb-book5{
+	display: none;
     margin-left: 22%;
     height: 21px;
     width: 95px;
@@ -66,7 +73,8 @@
 }
 
 .cyb-book6{
-    margin-left: 22%;
+    display: none;
+	margin-left: 22%;
     height: 25px;
     width: 111px;
     position: fixed;
@@ -74,18 +82,20 @@
 }
 
 .cyb-book7{
+	display: none;
     margin-left: 22%;
     height: 21px;
     width: 95px;
     position: fixed;
-    bottom: 70px;
+    bottom: 61px;
 }
 
 .cyb-safeshadow{
-	margin-left: 16%;
+	display: none;
+	margin-left: 15%;
     height: 28px;
     width: 283px;
     position: fixed;
-    bottom: 43px;
+    bottom: 46px;
     opacity: 0.5;
 }
