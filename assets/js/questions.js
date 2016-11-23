@@ -14,14 +14,14 @@ var questionManager = (function(){
  		managerToReturn.WrongAnswerCounter = 0;
 		managerToReturn.answerAlreadyShowed = {};
 		
-		managerToReturn.buildQuestion(isAmerican);	
+		managerToReturn.buildQuestion(isAmerican, isParty);	
 	}
 
 	managerToReturn.clearChildNodes = function(){
 		managerToReturn.win.innerHTML = "";
 	}
 
-	managerToReturn.buildQuestion = function (isAmerican) {
+	managerToReturn.buildQuestion = function (isAmerican, isParty) {
 		managerToReturn.win.style.display='block';
 		managerToReturn.fade.style.display='block';
 
