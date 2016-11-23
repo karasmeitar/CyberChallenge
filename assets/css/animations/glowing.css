@@ -1,0 +1,42 @@
+@-webkit-keyframes glowing {
+    0% { background-color: #00BFFF; -webkit-box-shadow: 0 0 3px #00BFFF; }
+    0% { font-size: 25px;}
+    50% { background-color: #0094FF; -webkit-box-shadow: 0 0 10px #0094FF; }
+    100% { font-size: 27px;}
+    100%{margin-left:-4px; }
+    100% { background-color: #00BFFF; -webkit-box-shadow: 0 0 3px #00BFFF; }
+}
+
+@-moz-keyframes glowing {
+    0% { background-color: #00BFFF; -moz-box-shadow: 0 0 3px #00BFFF; }
+    0% { font-size: 25px;}
+    50% { background-color: #0094FF; -moz-box-shadow: 0 0 10px #0094FF; }
+    100% { font-size: 27px;}
+    100%{margin-left:-4px; }
+    100% { background-color: #00BFFF; -moz-box-shadow: 0 0 3px #00BFFF; }
+}
+
+@-o-keyframes glowing {
+    0% { background-color: #00BFFF; box-shadow: 0 0 3px #00BFFF; }
+    0% { font-size: 25px;}
+    50% { background-color: #0094FF; box-shadow: 0 0 10px #0094FF; }
+    100% { font-size: 27px;}
+    100%{margin-left:-4px; }
+    100% { background-color: #00BFFF; box-shadow: 0 0 3px #00BFFF; }
+}
+
+@keyframes glowing {
+    0% { background-color: #00BFFF; box-shadow: 0 0 3px #00BFFF; }
+    0% { font-size: 25px;}
+    50% { background-color: #0094FF; box-shadow: 0 0 10px #0094FF; }
+    100% { font-size: 27px;}
+    100%{margin-left:-4px; }
+    100% { background-color: #00BFFF; box-shadow: 0 0 3px #00BFFF; }
+}
+
+.cyb-button {
+    -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+}

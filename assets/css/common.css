@@ -63,6 +63,22 @@ body{
     bottom: 32px;
 }
 
+.character1{
+    margin-left: 56%;
+    height: 415px;
+    width: 495px;
+    position: fixed;
+    bottom: 30px;
+}
+
+.character2{
+    margin-left: 10%;
+    height: 439px;
+    width: 313px;
+    position: fixed;
+    bottom: 30px;
+}
+
 .cyb-main-avatar{
     margin-left: calc(50% - 260px);
     position: fixed;
@@ -70,11 +86,10 @@ body{
 }
 
 .cyb-main-background{
-    background-image: url("../images/BG-3.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
+    background-image: url("../images/BG-3.jpg");
+  /*  background-position: -4600px -150px;*/
+  /*  height: 100vh;
+    width: 100vw;*/
 
 }
 
