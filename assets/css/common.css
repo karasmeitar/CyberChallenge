@@ -71,9 +71,9 @@ body{
 
 .cyb-main-background{
     background-image: url("../images/BG-3.jpg");
-  /*  background-position: -4600px -150px;*/
-  /*  height: 100vh;
-    width: 100vw;*/
+   background-position: 0px 768px;
+    height: 100vh;
+    width: 100vw;
 
 }
 
