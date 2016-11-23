@@ -285,7 +285,7 @@ Animate.css - http://daneden.me/animate
         transform: translate3d(0, 0, 0);
     }
     100%{
-        transform: translate3d(-1692px, 0, 0);
+        transform: translate3d(50px, 0, 0);
     }
 }
 
