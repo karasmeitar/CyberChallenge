@@ -6,4 +6,17 @@ $('.cyb-button').click(function(){
     //$('.cyb-second-background').css('display','block');
     //$('.cyb-second-background').addClass('slidein');
 
-})
+});
+
+function load(show) {
+    if (show) {
+        document.getElementById('fade').style.display='block';
+        document.getElementById('win').style.display='block';
+    }
+    else {
+        document.getElementById('fade').style.display='none';
+        document.getElementById('win').style.display='none';
+    }
+
+    buildQuestion();
+}
