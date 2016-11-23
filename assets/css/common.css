@@ -61,6 +61,7 @@ body{
     width: 495px;
     position: fixed;
     bottom: 30px;
+    display: none;
 }
 
 .character2{
@@ -69,14 +70,18 @@ body{
     width: 313px;
     position: fixed;
     bottom: 30px;
+    display: none;
 }
 
 .cyb-main-avatar{
     margin-left: calc(50% - 260px);
     position: fixed;
-    bottom: -31px;
+    bottom: 70px;
 }
 
+.cyb-need-animate-down{
+    z-index: 1005;
+}
 .cyb-main-background{
     background-image: url("../images/BG-3.jpg");
    background-position: 0px 768px;
@@ -85,13 +90,8 @@ body{
 
 }
 
-.cyb-second-background{
+.cyb-second-form{
     display: none;
-    background-image: url("../images/clouds.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
 }
 
 .slideout{
@@ -149,6 +149,71 @@ body{
 .focus_content {
   z-index: 1002;
 }
+
+.cyb-office{
+    display: none;
+}
+
+.cyb-bookcase {
+    margin-left: calc(50% - 340px);
+    position: fixed;
+    bottom: 5px;
+    z-index: 1003;
+}
+
+.cyb-table {
+    margin-left: calc(50% - 260px);
+    position: fixed;
+    bottom: 5px;
+    z-index: 1003;
+}
+
+.cyb-clock {
+    left: calc(50% + 300px);
+    top: 100px;
+    position: fixed;
+    z-index: 1003;
+    opacity: 0;
+}
+
+.cyb-bag {
+    left: calc(50% + 300px);
+    height: 100px;
+    position: fixed;
+    bottom: 5px;
+    z-index: 1003;
+}
+
+.cyb-change{
+    height: 100px;
+    width: 100px;
+    display: block;
+    z-index: 10000;
+    margin-left: 100px;
+    position: fixed;
+    top: 100px;
+}
+
+.cyb-change1{
+    height: 100px;
+    width: 100px;
+    display: block;
+    z-index: 10000;
+    margin-left: 300px;
+    position: fixed;
+    top: 100px;
+}
+
+.cyb-change2{
+    height: 100px;
+    width: 100px;
+    display: block;
+    z-index: 10000;
+    margin-left: 400px;
+    position: fixed;
+    top: 100px;
+}
+
 
 .win-fade {
     margin-top: 25px;

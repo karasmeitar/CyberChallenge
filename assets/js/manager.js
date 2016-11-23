@@ -41,7 +41,7 @@ function questionManager () {
         return answer == answerID ? true : false;
     }
 };
-=======
+
 var manager = (function() {
 
 	let returnManager = {};
@@ -91,4 +91,3 @@ var manager = (function() {
 
     
 }());
->>>>>>> e49a80148c6c208217df9a78485bd941caab1ae7

@@ -35,7 +35,6 @@ function runCode() {
 
 
 
-=======
 function buildQuestion() {
 	var field = document.getElementById("questionField");
 	var question = manager.getRandomQuestion();
@@ -48,5 +47,4 @@ function buildQuestion() {
 		p.innerHTML = PosibleAnswers[answerKey].answerContent;
 		field.appendChild(p);
 	}
-}
->>>>>>> e49a80148c6c208217df9a78485bd941caab1ae7
+};
