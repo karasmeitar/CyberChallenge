@@ -18,5 +18,5 @@ function load(show) {
         document.getElementById('win').style.display='none';
     }
 
-    buildQuestion();
+    questionManager.buildQuestion(true);
 }

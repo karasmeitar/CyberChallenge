@@ -3,8 +3,7 @@ var manager = (function() {
 	let returnManager = {};
 
     returnManager.allQuestionAnswers = {
-        "1": "",
-        "1": ""
+        "1": "1"
     };
 
     returnManager.allQuestionsDB = [
