@@ -208,3 +208,22 @@ Animate.css - http://daneden.me/animate
     -o-animation: glowing 1500ms infinite;
     animation: glowing 1500ms infinite;
 }
+
+@keyframes slideout{
+    0%{
+        transform: translate3d(0, 0, 0);
+    }
+    100%{
+        transform: translate3d(-1692px, 0, 0);
+    }
+}
+
+
+@keyframes slidein{
+    0%{
+        transform: translate3d(1888px, 0, 0);
+    }
+    100%{
+        transform: translate3d(0, 0, 0);
+    }
+}

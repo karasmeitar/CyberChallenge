@@ -25,14 +25,47 @@ body{
     bottom: 120px;
 }
 
-.cyb-tree3{
+.cyb-tree4{
     margin-left: 15%;
     height: 100px;
     width: 50px;
     position: fixed;
-    bottom: 120px;
+    bottom: 97px;
 }
 
+.cyb-tree5{
+    margin-left: 70%;
+    height: 100px;
+    width: 50px;
+    position: fixed;
+    bottom: 16px;
+}
+
+
+
+.cyb-tree6{
+    margin-left: 57%;
+    height: 100px;
+    width: 50px;
+    position: fixed;
+    bottom: 19px;
+}
+
+.cyb-tree7{
+    margin-left: 34%;
+    height: 100px;
+    width: 50px;
+    position: fixed;
+    bottom: 85px;
+}
+
+.cyb-tree8{
+    margin-left: 81%;
+    height: 100px;
+    width: 50px;
+    position: fixed;
+    bottom: 32px;
+}
 
 .cyb-main-avatar{
     margin-left: calc(50% - 260px);
@@ -46,6 +79,24 @@ body{
     background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
+
+}
+
+.cyb-second-background{
+    display: none;
+    background-image: url("../images/clouds.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+.slideout{
+    animation: slideout 5s linear;
+}
+
+.slidein{
+    animation: slidein 5s linear;
 }
 
 .cyb-button {
