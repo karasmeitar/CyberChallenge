@@ -39,8 +39,39 @@ $('.cyb-change1').click(function(){
     })});
 
 $('.cyb-change2').click(function(){
-    changePosition('.cyb-main-background','-8000px','768px',3000,function() {
-    })});
+    changePosition('.cyb-main-background','-8000px','768px',3000,function() {});
+
+    setTimeout(function(){
+
+        $( ".character2" ).css( "display", "block" );
+
+        $( ".character1" ).css( "display", "block" );
+        $( ".character1" ).addClass("animated-slow").addClass("slideFromRight ");
+    }, 3000);
+
+
+
+    setTimeout(function(){
+        smalltoBig('.character2', 313, 439, 5, 10, 1500);
+    }, 4000);
+
+    setTimeout(function(){
+
+        $( ".safe" ).css( "display", "block" );
+        $( ".safe" ).addClass("animated").addClass("bounceInDown ");
+        $( ".safe2" ).css( "display", "block" );
+        $( ".safe2" ).addClass("animated").addClass("bounceInDown ");
+
+    }, 5000);
+
+    setTimeout(function(){
+
+        $( ".safe-shadow" ).css( "display", "block" );
+        fadeIn(".safe-shadow", 2000)
+
+    }, 5000);
+
+});
 
 
 $( "#kaftor" ).click(function() {
