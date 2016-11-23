@@ -2,14 +2,6 @@
 body{
     overflow: hidden;
 }
-.cyb-tree{
-    margin-left: 30%;
-    height: 100px;
-    width: 50px;
-    position: fixed;
-    bottom: 120px;
-}
-
 .cyb-tree2{
     margin-left: 10%;
     position: fixed;
