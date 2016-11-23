@@ -258,3 +258,33 @@ body{
         opacity: 1;
     }
 }
+
+.cyb-bookcase {
+    margin-left: calc(50% - 340px);
+    position: fixed;
+    bottom: 5px;
+    z-index: 1003;
+}
+
+.cyb-table {
+    margin-left: calc(50% - 260px);
+    position: fixed;
+    bottom: 5px;
+    z-index: 1003;
+}
+
+.cyb-clock {
+    left: calc(50% + 300px);
+    top: 100px;
+    position: fixed;
+    z-index: 1003;
+    opacity: 0;
+}
+
+.cyb-bag {
+    left: calc(50% + 300px);
+    height: 100px;
+    position: fixed;
+    bottom: 5px;
+    z-index: 1003;
+}
