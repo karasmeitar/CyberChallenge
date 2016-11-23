@@ -9,16 +9,18 @@ $( document ).ready(function(){
 
 $('.cyb-button').click(function(){
     changePosition('.cyb-main-background','-1500px','768px',3000);
+
     $('.cyb-tree').hide();
     $('.cyb-title').hide();
     $('.cyb-main-avatar').animate({
         'marginLeft': '100px'
     },3000,function(){
+        $('.school-title').css( "display", "block" );
+        $('.school-title').addClass('animated').addClass('bounceInDown');
         setTimeout(function(){
             $('.cyb-collage').css( "display", "block" );
             $('.cyb-collage').addClass('animated').addClass('slideFromRight');
-			$('.school-title').css( "display", "block" );
-			$('.school-title').addClass('animated').addClass('bounceInDown');
+
 
         }, 200);
         setTimeout(function(){

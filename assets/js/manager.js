@@ -44,7 +44,7 @@ var manager = (function() {
     returnManager.allAmericanQuestionsDB = [
         {
             questionID: 1,
-            questionContent: "Which sorting algorithm has an upper bound of O(n lg n)?",
+            questionContent: "Which sorting algorithm has an upper bound of O(nlgn)?",
             PosibleAnswers:[
                 {
                     answerID:1,

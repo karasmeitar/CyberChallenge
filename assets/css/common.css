@@ -212,9 +212,9 @@ body{
   height: 100%;
   background-color: black;
   z-index: 1001;
-  -moz-opacity: 0.8;
+  -moz-opacity: 0.5;
   opacity: .80;
-  filter: alpha(opacity=80);
+  filter: alpha(opacity=50);
 }
 .focus_content {
   z-index: 1002;
@@ -341,10 +341,17 @@ body{
     padding-left: 15px;
     width: 550px;
 	margin-top: -164px;
+    font-size: 35px;
+}
+
+.school-title{
+    margin-top: -118px;
+    padding-left: 83px;
 }
 
 .finish-title{
 	width: 100%;
     text-align: center;
     margin-top: -60px;
+
 }
