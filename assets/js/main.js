@@ -17,6 +17,8 @@ $('.cyb-button').click(function(){
         setTimeout(function(){
             $('.cyb-collage').css( "display", "block" );
             $('.cyb-collage').addClass('animated').addClass('slideFromRight');
+			$('.school-title').css( "display", "block" );
+			$('.school-title').addClass('animated').addClass('bounceInDown');
         }, 200);
         setTimeout(function(){
             $(".cyb-book7").css( "display", "block" );
@@ -61,7 +63,7 @@ $('.cyb-button').click(function(){
         questionManager.beginNewQuiz(2, true,false, function () {
             $('.cyb-main-avatar').animate({
                 'marginLeft': '530px'
-            }, 4000);
+            }, 7000);
             changePosition('.cyb-main-background', '-4300px', '768px', 3000, function () {
                 $('.cyb-collage').hide();
                 $('.cyb-safeshadow').hide();
@@ -73,10 +75,13 @@ $('.cyb-button').click(function(){
                 $('.cyb-book2').hide();
                 $('.cyb-book1').hide();
                 $('.cyb-hat').hide();
+				$('.school-title').hide();
                 $('.cyb-main-avatar').animate({
                     'marginLeft': '530px'
                 },1000);
                 setTimeout(function(){
+					$('.office-title').css( "display", "block" );
+					$('.office-title').addClass('animated').addClass('bounceInDown');
                     $('.cyb-table').css( "display", "block" );
                     $('.cyb-table').addClass('animated-slow').addClass('bounceInUp');
                 }, 1000);
@@ -103,10 +108,10 @@ $('.cyb-button').click(function(){
                 questionManager.beginNewQuiz(2, false,false, function () {
                     func1();
                 });
-            }, 6000);
+            }, 10000);
             $('.cyb-second-form').hide();
         });
-    },7000);
+    },6000);
 
 });
 
@@ -115,12 +120,13 @@ var func1=function(){
     $('.cyb-table').hide();
     $('.cyb-bookcase').hide();
     $('.cyb-clock').hide();
+	$('.office-title').hide();
     changePosition('.cyb-main-background','-6000px','768px',3000,function() {
         window.setTimeout(function () {
             questionManager.beginNewQuiz(1, true,true, function () {
                 nextFunc1();
             });
-        }, 2000);
+        }, 8000);
     });
 
     setTimeout(function(){
@@ -129,7 +135,9 @@ var func1=function(){
     }, 2000);
 
     setTimeout(function(){
-        $( ".cyb-glass" ).css( "display", "block" );
+        $('.party-title').css( "display", "block" );
+		$('.party-title').addClass('animated').addClass('bounceInDown');            
+		$( ".cyb-glass" ).css( "display", "block" );
         $( ".cyb-glass" ).addClass("animated-slow").addClass("bounceInDown ");
 
     }, 2000);
@@ -144,9 +152,7 @@ var func1=function(){
 
 var nextFunc1=function(){
     changePosition('.cyb-main-background','-8000px','768px',3000,function() {});
-    $( ".cyb-crystal-ball").hide();
-    $( ".cyb-glass" ).hide();
-    $( ".cyb-hero-party").hide();
+
     setTimeout(function(){
 
         $( ".character2" ).css( "display", "block" );
@@ -154,6 +160,8 @@ var nextFunc1=function(){
         $( ".character1" ).css( "display", "block" );
         $( ".character1" ).addClass("animated-slow").addClass("slideFromRight ");
     }, 3000);
+
+
 
     setTimeout(function(){
         smalltoBig('.character2', 313, 439, 5, 10, 1500);
