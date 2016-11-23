@@ -1,0 +1,29 @@
+.cyb-hero-party{
+    margin-left: calc(50% - 153px);
+    height: 404px;
+    width: 280px;
+    position: fixed;
+    bottom: 70px;
+    z-index: 2000;
+    display: none;
+
+}
+
+.cyb-glass{
+    margin-left: calc(50% - 62px);
+    height: 41px;
+    width: 99px;
+    position: fixed;
+    bottom: 384px;
+    display: none;
+    z-index: 2006;
+}
+
+.cyb-crystal-ball{
+    margin-left: 60%;
+    height: 365px;
+    width: 196px;
+    position: fixed;
+    bottom: 55%;
+    display: none;
+}
