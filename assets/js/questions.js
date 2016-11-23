@@ -4,7 +4,7 @@ var questionManager = (function(){
 	managerToReturn.win = document.getElementById("win");
 	managerToReturn.fade = document.getElementById('fade');
 	
-	managerToReturn.beginNewQuiz = function(numberOfQuestionToPresent, isAmerican, callback){
+	managerToReturn.beginNewQuiz = function(numberOfQuestionToPresent, isAmerican, isParty, callback){
 		managerToReturn.clearChildNodes();
 		managerToReturn.numberOfQuestionToPresent = numberOfQuestionToPresent;
 		managerToReturn.callback = callback;
@@ -26,7 +26,7 @@ var questionManager = (function(){
 		managerToReturn.fade.style.display='block';
 
 		if (isAmerican) {
-			managerToReturn.createAmricanQuestion();
+			managerToReturn.createAmricanQuestion(isParty);
 		}
 		else {
 			managerToReturn.createCodeQuestion();
@@ -40,14 +40,13 @@ var questionManager = (function(){
 		titleTag.classList.add("american-question");
 		managerToReturn.win.appendChild(titleTag);
 
-		var input = document.createElement("textarea");
-        input.classList.add("code-question");
+		var input = document.createElement("input");
+		input.setAttribute("type", "text");
 		managerToReturn.win.appendChild(input);
 
 		var runBtn = document.createElement("button");
-        runBtn.classList.add("run-code-button");
 		runBtn.innerText = "Run";
-
+		
 		runBtn.onclick = function(){
 			codeText = "(function() {" + input.value  + "}())";
 				
@@ -72,8 +71,8 @@ var questionManager = (function(){
 			iconResultDiv.classList.add(result ? "correctIcon" : "wrongIcon");
 
 			var nextButton = document.createElement("button");
-			nextButton.innerText = "Next Question";
-			nextButton.classList.add("next-question-button");
+			nextButton.innerText = "Next quiz";
+			nextButton.classList.add("next-button");
 
 			nextButton.onclick = function (e) {					
 				managerToReturn.fade.style.display='none';
@@ -92,14 +91,14 @@ var questionManager = (function(){
 		managerToReturn.win.appendChild(runBtn);
 	}
 
- 	managerToReturn.createAmricanQuestion = function() {
+ 	managerToReturn.createAmricanQuestion = function(isParty) {
 		managerToReturn.clearChildNodes(); 
 		managerToReturn.currentQuestionIndex++;
 		
-		var question = manager.getRandomAmericanQuestion();
+		var question = manager.getRandomAmericanQuestion(isParty);
 		
 		while (managerToReturn.answerAlreadyShowed[question.questionID] != undefined) {
-			question = manager.getRandomAmericanQuestion();
+			question = manager.getRandomAmericanQuestion(isParty);
 		}
 
 		managerToReturn.answerAlreadyShowed[question.questionID] = true;
@@ -136,13 +135,13 @@ var questionManager = (function(){
 				var nextButton = document.createElement("button");
 				
 				if (managerToReturn.currentQuestionIndex === managerToReturn.numberOfQuestionToPresent) {
-					nextButton.innerText = "Next Question";
+					nextButton.innerText = "Next quiz";
 				}
 				else{
-					nextButton.innerText = "Next Question";
+					nextButton.innerText = "Next question";
 				}
 
-				nextButton.classList.add("next-question-button");
+				nextButton.classList.add("next-button");
 
 				nextButton.onclick = function (e) {
 					if (managerToReturn.currentQuestionIndex === managerToReturn.numberOfQuestionToPresent) {
