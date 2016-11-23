@@ -19,6 +19,7 @@ $('.cyb-button').click(function(){
             $('.cyb-collage').addClass('animated').addClass('slideFromRight');
 			$('.school-title').css( "display", "block" );
 			$('.school-title').addClass('animated').addClass('bounceInDown');
+
         }, 200);
         setTimeout(function(){
             $(".cyb-book7").css( "display", "block" );
@@ -63,7 +64,7 @@ $('.cyb-button').click(function(){
         questionManager.beginNewQuiz(2, true,false, function () {
             $('.cyb-main-avatar').animate({
                 'marginLeft': '530px'
-            }, 7000);
+            }, 4000);
             changePosition('.cyb-main-background', '-4300px', '768px', 3000, function () {
                 $('.cyb-collage').hide();
                 $('.cyb-safeshadow').hide();
@@ -108,10 +109,10 @@ $('.cyb-button').click(function(){
                 questionManager.beginNewQuiz(2, false,false, function () {
                     func1();
                 });
-            }, 10000);
+            }, 6000);
             $('.cyb-second-form').hide();
         });
-    },6000);
+    },7000);
 
 });
 
@@ -126,7 +127,7 @@ var func1=function(){
             questionManager.beginNewQuiz(1, true,true, function () {
                 nextFunc1();
             });
-        }, 8000);
+        }, 2000);
     });
 
     setTimeout(function(){
@@ -135,9 +136,9 @@ var func1=function(){
     }, 2000);
 
     setTimeout(function(){
-        $('.party-title').css( "display", "block" );
-		$('.party-title').addClass('animated').addClass('bounceInDown');            
-		$( ".cyb-glass" ).css( "display", "block" );
+		$('.party-title').css( "display", "block" );
+		$('.party-title').addClass('animated').addClass('bounceInDown');
+        $( ".cyb-glass" ).css( "display", "block" );
         $( ".cyb-glass" ).addClass("animated-slow").addClass("bounceInDown ");
 
     }, 2000);
@@ -152,16 +153,20 @@ var func1=function(){
 
 var nextFunc1=function(){
     changePosition('.cyb-main-background','-8000px','768px',3000,function() {});
-
+    $('.party-title').hide();
+	$( ".cyb-crystal-ball").hide();
+    $( ".cyb-glass" ).hide();
+    $( ".cyb-hero-party").hide();
+    $( ".cyb-party" ).css( "display", "none" );
     setTimeout(function(){
 
+		$( ".finish-title").css( "display", "block" );
+		$( ".finish-title").addClass("animated-slow").addClass("bounceInDown");
         $( ".character2" ).css( "display", "block" );
 
         $( ".character1" ).css( "display", "block" );
-        $( ".character1" ).addClass("animated-slow").addClass("slideFromRight ");
+        $( ".character1" ).addClass("animated-slow").addClass("slideFromRight");
     }, 3000);
-
-
 
     setTimeout(function(){
         smalltoBig('.character2', 313, 439, 5, 10, 1500);
@@ -174,6 +179,7 @@ var nextFunc1=function(){
         $( ".safe2" ).css( "display", "block" );
         $( ".safe2" ).addClass("animated").addClass("bounceInDown ");
 
+        $( ".safe-door-rotate" ).css( "display", "block" );
     }, 5000);
 
     setTimeout(function(){
@@ -182,39 +188,15 @@ var nextFunc1=function(){
         fadeIn(".safe-shadow", 2000)
 
     }, 5000);
+
+    setTimeout(function(){
+
+        openSafe(".safe", 0, 2000)
+
+    }, 6000);
 
 };
 
-
-$( "#kaftor" ).click(function() {
-
-
-    $( ".character2" ).css( "display", "block" );
-
-    $( ".character1" ).css( "display", "block" );
-    $( ".character1" ).addClass("animated-slow").addClass("slideFromRight ");
-
-    setTimeout(function(){
-        smalltoBig('.character2', 313, 439, 5, 10, 1500);
-    }, 1000);
-
-    setTimeout(function(){
-
-        $( ".safe" ).css( "display", "block" );
-        $( ".safe" ).addClass("animated-slow").addClass("bounceInDown ");
-        $( ".safe2" ).css( "display", "block" );
-        $( ".safe2" ).addClass("animated-slow").addClass("bounceInDown ");
-
-    }, 2000);
-
-    setTimeout(function(){
-
-        $( ".safe-shadow" ).css( "display", "block" );
-        fadeIn(".safe-shadow", 2000)
-
-    }, 2000);
-
-});
 
 function fadeIn(nameClass,time){
     $(nameClass).animate({
@@ -228,6 +210,12 @@ function smalltoBig(nameClass,x,y,bottom,left,time){
         'height': y,
         bottom: bottom,
         'margin-left': left
+    }, time);
+}
+
+function openSafe(nameClass,x,time){
+    $(nameClass).animate({
+        'width': x
     }, time);
 }
 
