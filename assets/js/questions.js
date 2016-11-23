@@ -5,6 +5,7 @@ var questionManager = (function(){
 	managerToReturn.fade = document.getElementById('fade');
 	
 	managerToReturn.beginNewQuiz = function(numberOfQuestionToPresent, isAmerican, callback){
+		managerToReturn.clearChildNodes();
 		managerToReturn.numberOfQuestionToPresent = numberOfQuestionToPresent;
 		managerToReturn.callback = callback;
 		managerToReturn.answerAlreadyShowed = {};
@@ -28,29 +29,66 @@ var questionManager = (function(){
 			managerToReturn.createAmricanQuestion();
 		}
 		else {
-
+			managerToReturn.createCodeQuestion();
 		}
 	}
 
-	managerToReturn.runCode = function() {
-		var resultElement = document.getElementById('resultText');
-		resultElement.innerText = "";
+	managerToReturn.createCodeQuestion = function() {
 
-		var codeText = document.getElementById('codeText').value;
-		codeText = "(function() {" + codeText + "}())";
-		try {
+		var titleTag = document.createElement("h1");
+		titleTag.innerHTML = "Enter a code that returns '2'";
+		titleTag.classList.add("american-question");
+		managerToReturn.win.appendChild(titleTag);
 
-			var codeResult = eval(codeText);
-			if (codeResult == 2) {
-				resultElement.innerText = "Good Answer";
+		var input = document.createElement("input");
+		input.setAttribute("type", "text");
+		managerToReturn.win.appendChild(input);
+
+		var runBtn = document.createElement("button");
+		runBtn.innerText = "Run";
+		
+		runBtn.onclick = function(){
+			codeText = "(function() {" + input.value  + "}())";
+				
+			try {
+				var result = false;
+				var codeResult = eval(codeText);
+				if (codeResult == 2) {
+					result = true;
+					managerToReturn.CorrectAnswerCounter++;
+				}
+				else {
+					managerToReturn.WrongAnswerCounter++;
+				}
 			}
-			else {
-				resultElement.innerText = "Wrong Answer";
+			catch(err) {
+				managerToReturn.WrongAnswerCounter++;
 			}
+
+			managerToReturn.clearChildNodes();
+
+			var iconResultDiv = document.createElement("div");
+			iconResultDiv.classList.add(result ? "correctIcon" : "wrongIcon");
+
+			var nextButton = document.createElement("button");
+			nextButton.innerText = "Next quiz";
+			nextButton.classList.add("next-button");
+
+			nextButton.onclick = function (e) {					
+				managerToReturn.fade.style.display='none';
+				managerToReturn.win.style.display='none';
+
+				managerToReturn.callback({
+					correctAnswer: managerToReturn.CorrectAnswerCounter,
+					wrongAnswer: managerToReturn.WrongAnswerCounter						
+				});
+			}
+
+			managerToReturn.win.appendChild(iconResultDiv);
+			managerToReturn.win.appendChild(nextButton);	
 		}
-		catch(err) {
-			resultElement.innerText = "Wrong Answer";
-		}
+		
+		managerToReturn.win.appendChild(runBtn);
 	}
 
  	managerToReturn.createAmricanQuestion = function() {
