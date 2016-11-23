@@ -4,38 +4,61 @@ var manager = (function() {
 	let returnManager = {};
 
     returnManager.allQuestionAnswers = {
-        "1": "1"
+        "1": "3",
+        "2": "4"
     };
 
-    returnManager.allQuestionsDB = [
+    returnManager.allAmericanQuestionsDB = [
         {
             questionID: 1,
-            questionContent: "How do you make each word in a text start with a capital letter?",
+            questionContent: "Which sorting algorithm has an upper bound of O(n lg n)?",
             PosibleAnswers:[
                 {
                     answerID:1,
-                    answerContent: "text-transform:capitalize"
+                    answerContent: "Bubble Sort"
                 },
                 {
                     answerID:2,
-                    answerContent: "text-transform:uppercase"
+                    answerContent: "Insertion Sort"
                 },
                 {
                     answerID:3,
-                    answerContent: "You can't do that with CSS"
+                    answerContent: "Merge Sort"
                 },
                 {
                     answerID:4,
-                    answerContent: "text:capitalize"
+                    answerContent: "Quicksort"
+                }
+            ]
+        },
+        {
+            questionID: 2,
+            questionContent: "What is the worst case running time for finding an element in a Splay Tree?",
+            PosibleAnswers:[
+                {
+                    answerID:1,
+                    answerContent: "O(1)"
+                },
+                {
+                    answerID:2,
+                    answerContent: "O(lg n)"
+                },
+                {
+                    answerID:3,
+                    answerContent: "O(n lg n)"
+                },
+                {
+                    answerID:4,
+                    answerContent: "O(n)"
                 }
             ]
         }
     ];
 	
-	returnManager.getRandomQuestion = function() {
+	returnManager.getRandomAmericanQuestion = function() {
         // Return a random number between 0 and 10:
-        let randomID = Math.floor((Math.random() * this.allQuestionsDB.length));
-        return this.allQuestionsDB[randomID];
+        let randomID = Math.floor((Math.random() * this.allAmericanQuestionsDB.length));
+        return this.allAmericanQuestionsDB[randomID];
     }
 
     returnManager.isAnswerCorrectForSpecificQuestions = function(questionID, answerID){
@@ -44,6 +67,4 @@ var manager = (function() {
     }
 		
 	return returnManager;
-
-    
 }());
