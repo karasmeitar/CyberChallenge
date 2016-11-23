@@ -6,6 +6,7 @@ var questionManager = (function(){
 	
 	managerToReturn.beginNewQuiz = function(numberOfQuestionToPresent, isAmerican, callback){
 		managerToReturn.numberOfQuestionToPresent = numberOfQuestionToPresent;
+		managerToReturn.callback = callback;
 		managerToReturn.answerAlreadyShowed = {};
 		managerToReturn.currentQuestionIndex = 0;
  		managerToReturn.CorrectAnswerCounter = 0;
@@ -78,7 +79,7 @@ var questionManager = (function(){
 				managerToReturn.clearChildNodes();
 
 				var iconResultDiv = document.createElement("div");
-				iconResultDiv.classList.add(result ? "successIcon" : "errorIcon");
+				iconResultDiv.classList.add(result ? "correctIcon" : "wrongIcon");
 				
 				if (result){
 					managerToReturn.CorrectAnswerCounter++;
@@ -88,7 +89,7 @@ var questionManager = (function(){
 
 				var nextButton = document.createElement("button");
 				nextButton.classList.add("next-button");
-				
+
 				nextButton.onclick = function (e) {
 					if (managerToReturn.currentQuestionIndex === managerToReturn.numberOfQuestionToPresent) {
 						

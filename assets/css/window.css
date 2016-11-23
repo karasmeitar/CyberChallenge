@@ -23,6 +23,7 @@
     background-image: url("../images/correctIcon.png");
     height: 100px;
     width: 100px;
+    z-index: 10022;
 }
 
 .wrongIcon{
@@ -30,6 +31,7 @@
     background-image: url("../images/wrongIcon.png");
     height: 100px;
     width: 100px;
+    z-index: 10022;
 }
 
 .win-fade {
