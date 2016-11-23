@@ -22,19 +22,19 @@ margin-left: 30%;
 }
 
 .cyb-button {
-    background-color: #004A7F;
+    background-color: #00BFFF;
     -webkit-border-radius: 10px;
-    border-radius: 10px;
+    border-radius: 3px;
     border: none;
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
-    font-family: Arial;
-    font-size: 20px;
-    padding: 5px 10px;
+    font-family: "Open Sans";
+    font-size: 25px;
+    padding: 9px 23px;
     text-align: center;
     text-decoration: none;
-    left:45%;
-    top: 25%;
+    left: 42%;
+    top: 20%;
     position: fixed;
 }
