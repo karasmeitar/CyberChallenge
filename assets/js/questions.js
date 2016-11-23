@@ -67,7 +67,7 @@ var questionManager = (function(){
 				nextButton.onclick = function (e) {
 					if (managerToReturn.currentQuestionIndex === managerToReturn.numberOfQuestionToPresent) {
 						document.getElementById('win').style.display='none';
-						callback({
+						managerToReturn.callback({
 							correctAnswer: managerToReturn.CorrectAnswerCounter,
 							wrongAnswer: managerToReturn.WrongAnswerCounter						
 						});
