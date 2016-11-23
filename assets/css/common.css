@@ -56,7 +56,7 @@ body{
 }
 
 .character1{
-    margin-left: 56%;
+    margin-left: 66%;
     height: 415px;
     width: 495px;
     position: fixed;
@@ -65,13 +65,43 @@ body{
 }
 
 .character2{
-    margin-left: 10%;
-    height: 439px;
-    width: 313px;
+    margin-left: 20%;
+    height: 0px;
+    width: 0px;
     position: fixed;
-    bottom: 30px;
+    bottom: 35%;
     display: none;
 }
+
+.safe{
+    margin-left: 290px;
+    height: 198px;
+    width: 170px;
+    position: fixed;
+    bottom: 20px;
+    display: none;
+}
+
+.safe2{
+    margin-left: 290px;
+    height: 198px;
+    width: 170px;
+    position: fixed;
+    bottom: 20px;
+    display: none;
+}
+
+.safe-shadow {
+    margin-left: 235px;
+    height: 60px;
+    width: 290px;
+    position: fixed;
+    bottom: -3px;
+    display: none;
+    opacity: 0;
+}
+
+
 
 .cyb-main-avatar{
     margin-left: calc(50% - 260px);

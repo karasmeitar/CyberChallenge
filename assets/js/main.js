@@ -56,10 +56,85 @@ $('.cyb-change1').click(function(){
     })});
 
 $('.cyb-change2').click(function(){
-    changePosition('.cyb-main-background','-8000px','768px',3000,function() {
-    })});
+    changePosition('.cyb-main-background','-8000px','768px',3000,function() {});
+
+    setTimeout(function(){
+
+        $( ".character2" ).css( "display", "block" );
+
+        $( ".character1" ).css( "display", "block" );
+        $( ".character1" ).addClass("animated-slow").addClass("slideFromRight ");
+    }, 3000);
 
 
+
+    setTimeout(function(){
+        smalltoBig('.character2', 313, 439, 5, 10, 1500);
+    }, 4000);
+
+    setTimeout(function(){
+
+        $( ".safe" ).css( "display", "block" );
+        $( ".safe" ).addClass("animated").addClass("bounceInDown ");
+        $( ".safe2" ).css( "display", "block" );
+        $( ".safe2" ).addClass("animated").addClass("bounceInDown ");
+
+    }, 5000);
+
+    setTimeout(function(){
+
+        $( ".safe-shadow" ).css( "display", "block" );
+        fadeIn(".safe-shadow", 2000)
+
+    }, 5000);
+
+});
+
+
+$( "#kaftor" ).click(function() {
+
+
+    $( ".character2" ).css( "display", "block" );
+
+    $( ".character1" ).css( "display", "block" );
+    $( ".character1" ).addClass("animated-slow").addClass("slideFromRight ");
+
+    setTimeout(function(){
+        smalltoBig('.character2', 313, 439, 5, 10, 1500);
+    }, 1000);
+
+    setTimeout(function(){
+
+        $( ".safe" ).css( "display", "block" );
+        $( ".safe" ).addClass("animated-slow").addClass("bounceInDown ");
+        $( ".safe2" ).css( "display", "block" );
+        $( ".safe2" ).addClass("animated-slow").addClass("bounceInDown ");
+
+    }, 2000);
+
+    setTimeout(function(){
+
+        $( ".safe-shadow" ).css( "display", "block" );
+        fadeIn(".safe-shadow", 2000)
+
+    }, 2000);
+
+});
+
+function fadeIn(nameClass,time){
+    $(nameClass).animate({
+        'opacity': 1
+    }, time);
+}
+
+function smalltoBig(nameClass,x,y,bottom,left,time){
+    $(nameClass).animate({
+        'width': x,
+        'height': y,
+        bottom: bottom,
+        'margin-left': left
+    }, time);
+}
 
 function changePosition(nameClass,x,y,time,cb){
     $(nameClass).animate({
