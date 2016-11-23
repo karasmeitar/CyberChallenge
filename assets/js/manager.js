@@ -36,14 +36,6 @@ var manager = (function() {
                 {
                     answerID:2,
                     answerContent: "Stirred"
-                },
-                {
-                    answerID:3,
-                    answerContent: "O(n lg n)"
-                },
-                {
-                    answerID:4,
-                    answerContent: "O(n)"
                 }
             ]
         }

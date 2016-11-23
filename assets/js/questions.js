@@ -12,7 +12,6 @@ var questionManager = (function(){
 		managerToReturn.currentQuestionIndex = 0;
  		managerToReturn.CorrectAnswerCounter = 0;
  		managerToReturn.WrongAnswerCounter = 0;
-		managerToReturn.answerAlreadyShowed = {};
 		
 		managerToReturn.buildQuestion(isAmerican, isParty);	
 	}
@@ -72,7 +71,7 @@ var questionManager = (function(){
 			iconResultDiv.classList.add(result ? "correctIcon" : "wrongIcon");
 
 			var nextButton = document.createElement("button");
-			nextButton.innerText = "Next Question";
+			nextButton.innerText = "Finish";
 			nextButton.classList.add("next-question-button");
 
 			nextButton.onclick = function (e) {					
@@ -136,7 +135,7 @@ var questionManager = (function(){
 				var nextButton = document.createElement("button");
 				
 				if (managerToReturn.currentQuestionIndex === managerToReturn.numberOfQuestionToPresent) {
-					nextButton.innerText = "Next Question";
+					nextButton.innerText = "Finish";
 				}
 				else{
 					nextButton.innerText = "Next Question";
