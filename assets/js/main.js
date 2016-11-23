@@ -72,7 +72,31 @@ $('.cyb-change1').click(function(){
     $('.cyb-clock').hide();
     changePosition('.cyb-main-background','-6000px','768px',3000,function() {
 
-    })});
+    });
+
+    setTimeout(function(){
+        $( ".cyb-hero-party" ).css( "display", "block" );
+
+        fadeIn(".cyb-hero-party", 2000);
+
+    }, 2000);
+
+    setTimeout(function(){
+        $( ".cyb-glass" ).css( "display", "block" );
+
+        $( ".cyb-glass" ).addClass("animated-slow").addClass("bounceInDown ");
+
+    }, 2000);
+
+
+    setTimeout(function(){
+        $( ".cyb-crystal-ball" ).css( "display", "block" );
+        $( ".cyb-crystal-ball" ).addClass("animated-slow").addClass("bounceInDown ");
+    }, 2700);
+
+
+
+});
 
 var nextFunc1=function(){
     changePosition('.cyb-main-background','-8000px','768px',3000,function() {});
