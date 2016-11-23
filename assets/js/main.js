@@ -6,7 +6,7 @@ $('.cyb-button').click(function(){
     },3000,function(){
         $('.cyb-second-form').show();
         $('.cyb-need-animate-down').addClass('animated-slow bounceInDown');
-        questionManager.beginNewQuiz(1, true, function(){
+        questionManager.beginNewQuiz(2, true, function(){
             changePosition('.cyb-main-background','-4300px','768px',3000,function(){
                 $('.cyb-main-avatar').animate({
                     'marginLeft': '530px'

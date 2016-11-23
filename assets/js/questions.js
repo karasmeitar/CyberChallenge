@@ -54,12 +54,13 @@ var questionManager = (function(){
 	}
 
  	managerToReturn.createAmricanQuestion = function() {
+		managerToReturn.clearChildNodes(); 
 		managerToReturn.currentQuestionIndex++;
 		
-		var question = manager.getRandomQuestion();
+		var question = manager.getRandomAmericanQuestion();
 		
 		while (managerToReturn.answerAlreadyShowed[question.questionID] != undefined) {
-			question = manager.getRandomQuestion();
+			question = manager.getRandomAmericanQuestion();
 		}
 
 		managerToReturn.answerAlreadyShowed[question.questionID] = true;
@@ -84,10 +85,18 @@ var questionManager = (function(){
 				if (result){
 					managerToReturn.CorrectAnswerCounter++;
 				}else {
-					CorrectAnswerCounter.WrongAnswerCounter++;
+					managerToReturn.WrongAnswerCounter++;
 				}
 
 				var nextButton = document.createElement("button");
+				
+				if (managerToReturn.currentQuestionIndex === managerToReturn.numberOfQuestionToPresent) {
+					nextButton.innerText = "Next quiz";
+				}
+				else{
+					nextButton.innerText = "Next question";
+				}
+
 				nextButton.classList.add("next-button");
 
 				nextButton.onclick = function (e) {
