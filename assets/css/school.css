@@ -1,0 +1,90 @@
+/*school screen*/
+
+.cyb-second-background{
+    background-image: url("../images/clouds.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+.cyb-collage{
+    margin-left: 34%;
+    height: 418px;
+    width: 926px;
+    position: fixed;
+    bottom: 85px;
+}
+
+.cyb-hat{
+    margin-left: calc(50% - 110px);
+    height: 62px;
+    width: 141px;
+    position: fixed;
+    bottom: 360px;
+    z-index: 2000;
+}
+
+.cyb-book1{
+    margin-left: 10%;
+    height: 22px;
+    width: 98px;
+    position: fixed;
+    bottom: 230px;
+}
+
+.cyb-book2{
+    margin-left: 10%;
+    height: 22px;
+    width: 88px;
+    position: fixed;
+    bottom: 208px;
+}
+
+.cyb-book3{
+    margin-left: 10%;
+    height: 21px;
+    width: 100px;
+    position: fixed;
+    bottom: 187px;
+}
+
+.cyb-book4{
+    margin-left: 10%;
+    height: 22px;
+    width: 106px;
+    position: fixed;
+    bottom: 165px;
+}
+
+.cyb-book5{
+    margin-left: 10%;
+    height: 21px;
+    width: 95px;
+    position: fixed;
+    bottom: 144px;
+}
+
+.cyb-book6{
+    margin-left: 10%;
+    height: 25px;
+    width: 111px;
+    position: fixed;
+    bottom: 119px;
+}
+
+.cyb-book7{
+    margin-left: 10%;
+    height: 21px;
+    width: 95px;
+    position: fixed;
+    bottom: 98px;
+}
+
+.cyb-safeshadow{
+	margin-left: 10%;
+    height: 28px;
+    width: 283px;
+    position: fixed;
+    bottom: 70px;
+}
