@@ -12,7 +12,6 @@ var questionManager = (function(){
 		managerToReturn.currentQuestionIndex = 0;
  		managerToReturn.CorrectAnswerCounter = 0;
  		managerToReturn.WrongAnswerCounter = 0;
-		managerToReturn.answerAlreadyShowed = {};
 		
 		managerToReturn.buildQuestion(isAmerican, isParty);	
 	}
