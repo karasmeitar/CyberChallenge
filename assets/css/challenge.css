@@ -16,3 +16,45 @@
 .american-answer-list {
     margin-top: 20px;
 }
+
+.code-question {
+    margin-top: 20px;
+    width: 500px;
+    height: 200px;
+    border-radius: 2px;
+    border: 0.2px solid #888888;
+    border-width: 2px;
+}
+
+.run-code-button {
+    background-color: #00BFFF;
+    -webkit-border-radius: 10px;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Open Sans";
+    font-size: 20px;
+    padding: 4px 15px;
+    display: block;
+    margin-top: 10px;
+}
+
+.next-question-button {
+    background-color: #00BFFF;
+    -webkit-border-radius: 10px;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Open Sans";
+    font-size: 20px;
+    padding: 4px 15px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 268px;
+}
