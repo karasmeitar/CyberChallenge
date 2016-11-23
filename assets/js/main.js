@@ -84,6 +84,7 @@ $('.cyb-change1').click(function(){
 $('.cyb-change2').click(function(){
     changePosition('.cyb-main-background','-8000px','768px',3000,function() {});
 
+    $( ".cyb-party" ).css( "display", "none" );
     setTimeout(function(){
 
         $( ".character2" ).css( "display", "block" );
@@ -105,6 +106,7 @@ $('.cyb-change2').click(function(){
         $( ".safe2" ).css( "display", "block" );
         $( ".safe2" ).addClass("animated").addClass("bounceInDown ");
 
+        $( ".safe-door-rotate" ).css( "display", "block" );
     }, 5000);
 
     setTimeout(function(){
@@ -114,38 +116,15 @@ $('.cyb-change2').click(function(){
 
     }, 5000);
 
+    setTimeout(function(){
+
+        openSafe(".safe", 0, 2000)
+
+    }, 6000);
+
+
 });
 
-
-$( "#kaftor" ).click(function() {
-
-
-    $( ".character2" ).css( "display", "block" );
-
-    $( ".character1" ).css( "display", "block" );
-    $( ".character1" ).addClass("animated-slow").addClass("slideFromRight ");
-
-    setTimeout(function(){
-        smalltoBig('.character2', 313, 439, 5, 10, 1500);
-    }, 1000);
-
-    setTimeout(function(){
-
-        $( ".safe" ).css( "display", "block" );
-        $( ".safe" ).addClass("animated-slow").addClass("bounceInDown ");
-        $( ".safe2" ).css( "display", "block" );
-        $( ".safe2" ).addClass("animated-slow").addClass("bounceInDown ");
-
-    }, 2000);
-
-    setTimeout(function(){
-
-        $( ".safe-shadow" ).css( "display", "block" );
-        fadeIn(".safe-shadow", 2000)
-
-    }, 2000);
-
-});
 
 function fadeIn(nameClass,time){
     $(nameClass).animate({
@@ -159,6 +138,12 @@ function smalltoBig(nameClass,x,y,bottom,left,time){
         'height': y,
         bottom: bottom,
         'margin-left': left
+    }, time);
+}
+
+function openSafe(nameClass,x,time){
+    $(nameClass).animate({
+        'width': x
     }, time);
 }
 

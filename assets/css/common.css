@@ -78,7 +78,7 @@ body{
     height: 198px;
     width: 170px;
     position: fixed;
-    bottom: 20px;
+    bottom: 70px;
     display: none;
 }
 
@@ -87,16 +87,17 @@ body{
     height: 198px;
     width: 170px;
     position: fixed;
-    bottom: 20px;
+    bottom: 70px;
     display: none;
 }
+
 
 .safe-shadow {
     margin-left: 235px;
     height: 60px;
     width: 290px;
     position: fixed;
-    bottom: -3px;
+    bottom: 47px;
     display: none;
     opacity: 0;
 }
