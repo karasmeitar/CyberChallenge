@@ -1,0 +1,46 @@
+@-o-keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        -o-transform: translateX(2000px);
+    }
+
+    60% {
+        opacity: 1;
+        -o-transform: translateX(-8px);
+    }
+
+    80% {
+        -o-transform: translateX(2px);
+    }
+
+    100% {
+        -o-transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateX(-8px);
+    }
+
+    80% {
+        transform: translateX(2px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slideFromRight {
+    -webkit-animation-name: slideFromRight;
+    -moz-animation-name: slideFromRight;
+    -o-animation-name: slideFromRight;
+    animation-name: slideFromRight;
+}
