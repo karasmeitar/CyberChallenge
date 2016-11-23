@@ -13,6 +13,27 @@
     left:40%;
 }
 
+.next-button{
+    height: 35px;
+    width: 80px;
+}
+
+.correctIcon{
+    background-repeat: no-repeat;
+    background-image: url("../images/correctIcon.png");
+    height: 100px;
+    width: 100px;
+    z-index: 10022;
+}
+
+.wrongIcon{
+	background-repeat: no-repeat;
+    background-image: url("../images/wrongIcon.png");
+    height: 100px;
+    width: 100px;
+    z-index: 10022;
+}
+
 .win-fade {
     margin-top: 25px;
     font-size: 21px;
