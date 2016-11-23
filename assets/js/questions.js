@@ -4,63 +4,101 @@ var questionManager = (function(){
 	managerToReturn.win = document.getElementById("win");
 	managerToReturn.fade = document.getElementById('fade');
 	
-	managerToReturn.beginNewQuiz = function(numberOfQuestionToPresent, isAmerican, callback){
+	managerToReturn.beginNewQuiz = function(numberOfQuestionToPresent, isAmerican, isParty, callback){
+		managerToReturn.clearChildNodes();
 		managerToReturn.numberOfQuestionToPresent = numberOfQuestionToPresent;
 		managerToReturn.callback = callback;
 		managerToReturn.answerAlreadyShowed = {};
 		managerToReturn.currentQuestionIndex = 0;
  		managerToReturn.CorrectAnswerCounter = 0;
  		managerToReturn.WrongAnswerCounter = 0;
-		managerToReturn.answerAlreadyShowed = {};
 		
-		managerToReturn.buildQuestion(isAmerican);	
+		managerToReturn.buildQuestion(isAmerican, isParty);	
 	}
 
 	managerToReturn.clearChildNodes = function(){
 		managerToReturn.win.innerHTML = "";
 	}
 
-	managerToReturn.buildQuestion = function (isAmerican) {
+	managerToReturn.buildQuestion = function (isAmerican, isParty) {
 		managerToReturn.win.style.display='block';
 		managerToReturn.fade.style.display='block';
 
 		if (isAmerican) {
-			managerToReturn.createAmricanQuestion();
+			managerToReturn.createAmricanQuestion(isParty);
 		}
 		else {
-
+			managerToReturn.createCodeQuestion();
 		}
 	}
 
-	managerToReturn.runCode = function() {
-		var resultElement = document.getElementById('resultText');
-		resultElement.innerText = "";
+	managerToReturn.createCodeQuestion = function() {
 
-		var codeText = document.getElementById('codeText').value;
-		codeText = "(function() {" + codeText + "}())";
-		try {
+		var titleTag = document.createElement("h1");
+		titleTag.innerHTML = "Enter a code that returns '2'";
+		titleTag.classList.add("american-question");
+		managerToReturn.win.appendChild(titleTag);
 
-			var codeResult = eval(codeText);
-			if (codeResult == 2) {
-				resultElement.innerText = "Good Answer";
+		var input = document.createElement("textarea");
+        input.classList.add("code-question");
+		managerToReturn.win.appendChild(input);
+
+		var runBtn = document.createElement("button");
+        runBtn.classList.add("run-code-button");
+		runBtn.innerText = "Run";
+
+		runBtn.onclick = function(){
+			codeText = "(function() {" + input.value  + "}())";
+				
+			try {
+				var result = false;
+				var codeResult = eval(codeText);
+				if (codeResult == 2) {
+					result = true;
+					managerToReturn.CorrectAnswerCounter++;
+				}
+				else {
+					managerToReturn.WrongAnswerCounter++;
+				}
 			}
-			else {
-				resultElement.innerText = "Wrong Answer";
+			catch(err) {
+				managerToReturn.WrongAnswerCounter++;
 			}
+
+			managerToReturn.clearChildNodes();
+
+			var iconResultDiv = document.createElement("div");
+			iconResultDiv.classList.add(result ? "correctIcon" : "wrongIcon");
+
+			var nextButton = document.createElement("button");
+			nextButton.innerText = "Finish";
+			nextButton.classList.add("next-question-button");
+
+			nextButton.onclick = function (e) {					
+				managerToReturn.fade.style.display='none';
+				managerToReturn.win.style.display='none';
+
+				managerToReturn.callback({
+					correctAnswer: managerToReturn.CorrectAnswerCounter,
+					wrongAnswer: managerToReturn.WrongAnswerCounter						
+				});
+			}
+
+			managerToReturn.win.appendChild(iconResultDiv);
+			managerToReturn.win.appendChild(nextButton);	
 		}
-		catch(err) {
-			resultElement.innerText = "Wrong Answer";
-		}
+		
+		managerToReturn.win.appendChild(runBtn);
 	}
 
- 	managerToReturn.createAmricanQuestion = function() {
+ 	managerToReturn.createAmricanQuestion = function(isParty) {
 		managerToReturn.clearChildNodes(); 
 		managerToReturn.currentQuestionIndex++;
 		
-		var question = manager.getRandomAmericanQuestion();
+		var question = manager.getRandomAmericanQuestion(isParty);
 		
 		while (managerToReturn.answerAlreadyShowed[question.questionID] != undefined) {
-			question = manager.getRandomAmericanQuestion();
+			question = manager.getRandomAmericanQuestion(isParty);
 		}
 
 		managerToReturn.answerAlreadyShowed[question.questionID] = true;
@@ -97,13 +135,13 @@ var questionManager = (function(){
 				var nextButton = document.createElement("button");
 				
 				if (managerToReturn.currentQuestionIndex === managerToReturn.numberOfQuestionToPresent) {
-					nextButton.innerText = "Next quiz";
+					nextButton.innerText = "Finish";
 				}
 				else{
-					nextButton.innerText = "Next question";
+					nextButton.innerText = "Next Question";
 				}
 
-				nextButton.classList.add("next-button");
+				nextButton.classList.add("next-question-button");
 
 				nextButton.onclick = function (e) {
 					if (managerToReturn.currentQuestionIndex === managerToReturn.numberOfQuestionToPresent) {
@@ -117,7 +155,7 @@ var questionManager = (function(){
 						});
 					}
 					else {
-						managerToReturn.createAmricanQuestion();
+						managerToReturn.createAmricanQuestion(isParty);
 					}
 				}
 
