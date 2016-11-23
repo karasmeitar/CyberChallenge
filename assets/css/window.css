@@ -44,12 +44,10 @@
         opacity:1;
     }
 }
-@-o-keyframes fadein {
-    /* Opera */
+@-o-keyframes fadein { /* Opera */
     from {
-        opacity: 0;
+        opacity:0;
     }
     to {
         opacity: 1;
     }
-}
