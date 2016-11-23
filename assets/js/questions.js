@@ -6,11 +6,8 @@ var questionManager = (function(){
 	managerToReturn.currentQuestionIndex = 0;
  	managerToReturn.CorrectAnswerCounter = 0;
  	managerToReturn.WrongAnswerCounter = 0;
-	managerToReturn.answerAlreadyShowed = {
-
-	}
+	managerToReturn.answerAlreadyShowed = {	};
 	
-
 	managerToReturn.resetManager = function(numberOfQuestionToPresent){
 		managerToReturn.numberOfQuestionToPresent = numberOfQuestionToPresent;
 		managerToReturn.answerAlreadyShowed = {};
@@ -21,6 +18,7 @@ var questionManager = (function(){
 	}
 
 	managerToReturn.buildQuestion = function (isAmerican, callback) {
+		managerToReturn.win.style.display='block';
 		managerToReturn.callback = callback;
 
 		if (isAmerican) {
@@ -70,7 +68,8 @@ var questionManager = (function(){
 					if (managerToReturn.currentQuestionIndex === managerToReturn.numberOfQuestionToPresent) {
 						document.getElementById('win').style.display='none';
 						callback({
-							
+							correctAnswer: managerToReturn.CorrectAnswerCounter,
+							wrongAnswer: managerToReturn.WrongAnswerCounter						
 						});
 					}
 					else {
