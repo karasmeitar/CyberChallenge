@@ -119,7 +119,7 @@ body{
     height: 198px;
     width: 170px;
     position: fixed;
-    bottom: 70px;
+    bottom: 20px;
     display: none;
 }
 
@@ -128,17 +128,16 @@ body{
     height: 198px;
     width: 170px;
     position: fixed;
-    bottom: 70px;
+    bottom: 20px;
     display: none;
 }
-
 
 .safe-shadow {
     margin-left: 235px;
     height: 60px;
     width: 290px;
     position: fixed;
-    bottom: 47px;
+    bottom: -3px;
     display: none;
     opacity: 0;
 }
@@ -212,9 +211,9 @@ body{
   height: 100%;
   background-color: black;
   z-index: 1001;
-  -moz-opacity: 0.8;
-  opacity: .80;
-  filter: alpha(opacity=80);
+  -moz-opacity: 0.5;
+  opacity: .50;
+  filter: alpha(opacity=50);
 }
 .focus_content {
   z-index: 1002;
@@ -331,4 +330,24 @@ body{
     to {
         opacity: 1;
     }
+}
+
+.office-title{
+	display: none;
+	top: 0px;
+    position: fixed;
+	display: none;
+    padding-left: 15px;
+    width: 550px;
+	margin-top: -164px;
+}
+
+.party-title{
+	display: none;
+	top: 0px;
+    position: fixed;
+	display: none;
+    padding-left: 15px;
+    width: 550px;
+	margin-top: -164px;
 }
