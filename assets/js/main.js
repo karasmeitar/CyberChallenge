@@ -16,28 +16,29 @@ $('.cyb-button').click(function(){
     },3000,function(){
         $('.cyb-second-form').show();
         $('.cyb-need-animate-down').addClass('animated-slow bounceInDown');
-        questionManager.beginNewQuiz(2, true, function(){
-            changePosition('.cyb-main-background','-4300px','768px',3000,function(){
-                $('.cyb-main-avatar').animate({
-                    'marginLeft': '530px'
-                },3000);
-                $('.cyb-office').show();
-                $('.cyb-bag').addClass('animated-slow').addClass('slideFromRight');
-                $('.cyb-table').addClass('animated').addClass('bounceInDown');
-                $('.cyb-bookcase').addClass('animated-slow').addClass('slideFromLeft');
-                $('.cyb-clock').addClass('animated-slow').addClass('win-fade');
-                window.setTimeout(function() {
-                    questionManager.resetManager(1);
-                    questionManager.buildQuestion(false, function () {
-                        nextFunc();
-                    });
-                }, 5000);
-                window.setTimeout(function(){
-                    $('.cyb-clock').css('opacity','1');
-                }, 6000);
+        window.setTimeout(function() {
+            questionManager.beginNewQuiz(2, true, function () {
+                changePosition('.cyb-main-background', '-4300px', '768px', 3000, function () {
+                    $('.cyb-main-avatar').animate({
+                        'marginLeft': '530px'
+                    }, 3000);
+                    $('.cyb-office').show();
+                    $('.cyb-bag').addClass('animated-slow').addClass('slideFromRight');
+                    $('.cyb-table').addClass('animated').addClass('bounceInDown');
+                    $('.cyb-bookcase').addClass('animated-slow').addClass('slideFromLeft');
+                    $('.cyb-clock').addClass('animated-slow').addClass('win-fade');
+                    window.setTimeout(function () {
+                        questionManager.beginNewQuiz(2, false, function () {
+                            nextFunc();
+                        });
+                    }, 4000);
+                    window.setTimeout(function () {
+                        $('.cyb-clock').css('opacity', '1');
+                    }, 6000);
+                });
+                $('.cyb-second-form').hide();
             });
-            $('.cyb-second-form').hide();
-        });
+        },5000);
     });
     $('.cyb-button').hide();
 
@@ -73,7 +74,7 @@ $('.cyb-change1').click(function(){
 
     })});
 
-$('.cyb-change2').click(function(){
+var nextFunc1=function(){
     changePosition('.cyb-main-background','-8000px','768px',3000,function() {});
 
     setTimeout(function(){
@@ -106,7 +107,7 @@ $('.cyb-change2').click(function(){
 
     }, 5000);
 
-});
+};
 
 
 $( "#kaftor" ).click(function() {

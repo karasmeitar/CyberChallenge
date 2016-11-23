@@ -44,6 +44,19 @@ body{
     padding-left: 432px;
 }
 
+.cyb-second-text{
+    font-size: 30px;
+    color:white;
+    font-family: "Open Sans";
+    text-shadow: 2px 2px black;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    background-color: transparent;
+    margin-top: 170px;
+    margin-left: 432px;
+}
+
 .cyb-title{
     display: none;
 }
