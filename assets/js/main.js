@@ -108,18 +108,19 @@ $('.cyb-button').click(function(){
             $('.cyb-second-form').hide();
             window.setTimeout(function ()
             {
+            $('.cyb-main-avatar').css('z-index',0);
             $('.cyb-bag').css('z-index',0);
             $('.cyb-table').css('z-index',0);
             $('.cyb-bookcase').css('z-index',0);
             $('.cyb-clock').css('z-index',0);
             $('.office-title').css('z-index',0);
-            $('.cyb-main-avatar').css('z-index',0);
+
 
                 questionManager.beginNewQuiz(2, false,false, function () {
-                    $('.cyb-main-avatar').css('z-index',1002);
                     func1();
                 });
             }, 8000);
+            $('.cyb-main-avatar').css('z-index',1002);
             $('.cyb-second-form').hide();
         });
     },7500);

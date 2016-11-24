@@ -40,7 +40,7 @@ body{
     font-variant: normal;
     font-weight: 600;
     background-color: transparent;
-    padding-top: 170px;
+    padding-top: 119px;
     padding-left: 432px;
 }
 
@@ -210,11 +210,13 @@ body{
   left: 0%;
   width: 100%;
   height: 100%;
+    opacity: 0.5;
   background-color: black;
   z-index: 1001;
-  -moz-opacity: 0.5;
-  opacity: .50;
-  filter: alpha(opacity=50);
+    -webkit-animation-name: fadeIn50;
+    -webkit-animation-duration: 3s;
+    animation-name: fadeIn50;
+    animation-duration: 3s;
 }
 .focus_content {
   z-index: 1002;
@@ -342,6 +344,7 @@ body{
     width: 650px;
 	margin-top: -164px;
     font-size: 35px;
+    padding-top: 170px;
 }
 
 .school-title,.office-title,.party-title{
@@ -355,4 +358,18 @@ body{
     text-align: center;
     margin-top: -60px;
 
+}
+
+@-webkit-keyframes fadeIn50 {
+    0% { opacity: 0; }
+    20% { opacity: 0; }
+    40% { opacity: 0.3; }
+    100% { opacity: 0.5; }
+}
+
+@keyframes fadeIn50 {
+    0% { opacity: 0; }
+    20% { opacity: 0; }
+    40% { opacity: 0.3; }
+    100% { opacity: 0.5; }
 }
