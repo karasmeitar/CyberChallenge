@@ -20,8 +20,6 @@ $('.cyb-button').click(function(){
         setTimeout(function(){
             $('.cyb-collage').css( "display", "block" );
             $('.cyb-collage').addClass('animated').addClass('slideFromRight');
-
-
         }, 200);
         setTimeout(function(){
             $(".cyb-book7").css( "display", "block" );
@@ -63,6 +61,7 @@ $('.cyb-button').click(function(){
     });
     $('.cyb-button').hide();
     window.setTimeout(function() {
+        $('.cyb-need-animate-down').css('z-index',0);
         questionManager.beginNewQuiz(2, true,false, function () {
             $('.cyb-main-avatar').animate({
                 'marginLeft': '530px'
@@ -107,14 +106,24 @@ $('.cyb-button').click(function(){
                 }, 3000);
             });
             $('.cyb-second-form').hide();
-            window.setTimeout(function () {
+            window.setTimeout(function ()
+            {
+            $('.cyb-main-avatar').css('z-index',0);
+            $('.cyb-bag').css('z-index',0);
+            $('.cyb-table').css('z-index',0);
+            $('.cyb-bookcase').css('z-index',0);
+            $('.cyb-clock').css('z-index',0);
+            $('.office-title').css('z-index',0);
+
+
                 questionManager.beginNewQuiz(2, false,false, function () {
                     func1();
                 });
-            }, 6000);
+            }, 8000);
+            $('.cyb-main-avatar').css('z-index',1002);
             $('.cyb-second-form').hide();
         });
-    },7000);
+    },7500);
 
 });
 
