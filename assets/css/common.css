@@ -213,7 +213,7 @@ body{
   background-color: black;
   z-index: 1001;
   -moz-opacity: 0.5;
-  opacity: .80;
+  opacity: .50;
   filter: alpha(opacity=50);
 }
 .focus_content {
@@ -333,20 +333,21 @@ body{
     }
 }
 
-.page-title{
+.page-title,.office-title{
 	display: none;
 	top: 0px;
     position: fixed;
 	display: none;
     padding-left: 15px;
-    width: 550px;
+    width: 650px;
 	margin-top: -164px;
     font-size: 35px;
 }
 
-.school-title{
+.school-title,.office-title,.party-title{
     margin-top: -118px;
     padding-left: 83px;
+    width: 800px;
 }
 
 .finish-title{
