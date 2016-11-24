@@ -35,11 +35,12 @@ var questionManager = (function(){
 	managerToReturn.createCodeQuestion = function() {
 
 		var titleTag = document.createElement("h1");
-		titleTag.innerHTML = "Enter a code that returns '2'";
+		titleTag.innerHTML = "Enter a one line code that returns 5 when the input is 3 and 3 when the input is 5";
 		titleTag.classList.add("american-question");
 		managerToReturn.win.appendChild(titleTag);
 
 		var input = document.createElement("textarea");
+		input.value = "function(x) {\n\n\n}";
         input.classList.add("code-question");
 		managerToReturn.win.appendChild(input);
 
@@ -48,12 +49,14 @@ var questionManager = (function(){
 		runBtn.innerText = "Run";
 
 		runBtn.onclick = function(){
-			codeText = "(function() {" + input.value  + "}())";
-				
+			var codeText5 = "(" + input.value  + "(3))";
+            var codeText3 = "(" + input.value  + "(5))";
+
 			try {
 				var result = false;
-				var codeResult = eval(codeText);
-				if (codeResult == 2) {
+				var codeResult5 = eval(codeText5);
+                var codeResult3 = eval(codeText3);
+				if (codeResult5 == 5 && codeResult3 == 3) {
 					result = true;
 					managerToReturn.CorrectAnswerCounter++;
 				}
@@ -71,8 +74,8 @@ var questionManager = (function(){
 			iconResultDiv.classList.add(result ? "correctIcon" : "wrongIcon");
 
 			var nextButton = document.createElement("button");
-			nextButton.innerText = "Finish";
-			nextButton.classList.add("next-question-button");
+			nextButton.innerText = "Next Quiz";
+			nextButton.classList.add("next-quiz-button");
 
 			nextButton.onclick = function (e) {					
 				managerToReturn.fade.style.display='none';
@@ -135,13 +138,13 @@ var questionManager = (function(){
 				var nextButton = document.createElement("button");
 				
 				if (managerToReturn.currentQuestionIndex === managerToReturn.numberOfQuestionToPresent) {
-					nextButton.innerText = "Finish";
+					nextButton.innerText = "Next Quiz";
+                    nextButton.classList.add("next-quiz-button");
 				}
 				else{
 					nextButton.innerText = "Next Question";
+                    nextButton.classList.add("next-question-button");
 				}
-
-				nextButton.classList.add("next-question-button");
 
 				nextButton.onclick = function (e) {
 					if (managerToReturn.currentQuestionIndex === managerToReturn.numberOfQuestionToPresent) {

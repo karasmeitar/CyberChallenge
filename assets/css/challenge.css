@@ -1,7 +1,7 @@
 .american-question {
     font-family: "Open Sans";
     font-size: 27px;
-    width: 650px;
+    width: 640px;
 }
 .american-answer {
     font-family: "Open Sans";
@@ -19,7 +19,7 @@
 
 .code-question {
     margin-top: 20px;
-    width: 500px;
+    width: 600px;
     height: 200px;
     border-radius: 2px;
     border: 0.2px solid #888888;
@@ -45,9 +45,9 @@
 }
 
 .next-question-button {
-    background-color: #00BFFF;
-    -webkit-border-radius: 10px;
-    border-radius: 4px;
+    background-color: #9adef5;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
     border: none;
     font-weight: bold;
     color: #FFFFFF;
@@ -57,6 +57,25 @@
     font-size: 20px;
     padding: 4px 15px;
     display: block;
-    margin-top: 30px;
-    margin-left: 268px;
+    margin-top: -12px;
+    margin-left: 221px;
+    width: 200px;
+}
+
+.next-quiz-button {
+    background-color: #9adef5;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Open Sans";
+    font-size: 20px;
+    padding: 4px 15px;
+    display: block;
+    margin-top: -12px;
+    margin-left: 221px;
+    width: 200px;
 }
